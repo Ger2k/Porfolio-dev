@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro';
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from '../components/icons/Mail.astro';
+import SocialPill from '../components/SocialPill.astro';
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import EstudiosIcon from '../components/icons/Estudios.astro'
+import CodeIcon from '../components/icons/Code.astro'
+---
+
+<Layout
+  title="Porfolio de Ger - Desarrollador y Programador Web" description='Contrata a Ger para crear tu aplicación web o móvil'
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
+      <img
+        class="rounded-full size-12 mb-4"
+        src="https://avatars.githubusercontent.com/u/124883232?v=4" 
+        alt="foto perfil"
+      />
+      <h1
+        class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, soy Ger <a
+          href="https://www.linkedin.com/in/germ%C3%A1n-casesnoves-serrano-58a4a62b0/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center hover:scale-105 transition"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2
+        class="text-xl lg:text-2xl text-pretty max-w-[700px] text-black dark:text-white"
+      >
+        <span>Apasionado de las nuevas tecnologías.</span><span
+          class="text-yellow-800 dark:text-yellow-200"
+        >
+          Constructor de Experiencias Web Interactivas.</span
+        >
+        <span class="text-red-800 dark:text-red-200">
+          De Madrid, España.</span
+        >
+        <span class="text-sky-800 dark:text-sky-200"
+          > Comprometido con el aprendizaje continuo y la mejora en el desarrollo web.</span
+        >
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/germ%C3%A1n-casesnoves-serrano-58a4a62b0/">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/ger2k">
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:musikadicto@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          musikadicto@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+      >
+        <EstudiosIcon class="size-7" />
+        Formación Académica en Desarrollo Web
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+      >
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main>
+</Layout>
